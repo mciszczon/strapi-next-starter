@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "standard": "npx standard --fix"
+    "standard": "npx standard"
   },
   "dependencies": {
     "next": "9.2.2",
@@ -19,7 +19,16 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "standard"
+      "pre-commit": "npx standard"
     }
+  },
+  "standard": {
+    "globals": [
+      "React"
+    ],
+    "ignore": [
+      "node_modules"
+    ],
+    "fix": true
   }
 }
