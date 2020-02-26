@@ -19,7 +19,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "standard"
+      "pre-commit": "npx standard"
     }
   },
   "standard": {
