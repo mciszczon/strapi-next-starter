@@ -5,11 +5,20 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "standard": "npx standard --fix"
   },
   "dependencies": {
     "next": "9.2.2",
     "react": "16.13.0",
     "react-dom": "16.13.0"
+  },
+  "devDependencies": {
+    "husky": "^4.2.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "standard"
+    }
   }
 }
