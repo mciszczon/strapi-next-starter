@@ -1,50 +1,50 @@
 import Head from 'next/head'
 
 const Home = () => (
-    <div className="container">
-        <Head>
-            <title>Investoko</title>
-            <link rel="icon" href="/favicon.ico"/>
-        </Head>
+  <div className="container">
+    <Head>
+      <title>Investoko</title>
+      <link rel="icon" href="/favicon.ico"/>
+    </Head>
 
-        <main>
-            <h1 className="title">
-                ⚡ Welcome to Investoko
-            </h1>
+    <main>
+      <h1 className="title">
+        ⚡ Welcome to Investoko
+      </h1>
 
-            <p className="description">
-                We're launching soon!
-            </p>
+      <p className="description">
+        We're launching soon!
+      </p>
 
-            <div className="grid">
-                <div className="card">
-                    <h2>Manage your investment portfolio</h2>
-                    <p>Easily add your holdings and products, see your diversification.</p>
-                </div>
+      <div className="grid">
+        <div className="card">
+          <h2>Manage your investment portfolio</h2>
+          <p>Easily add your holdings and products, see your diversification.</p>
+        </div>
 
-                <div className="card">
-                    <h2>Analyze your earnings</h2>
-                    <p>See how much you make in each of your holdings and the room for growth.</p>
-                </div>
+        <div className="card">
+          <h2>Analyze your earnings</h2>
+          <p>See how much you make in each of your holdings and the room for growth.</p>
+        </div>
 
-                <div className="card">
-                    <h2>Calculate currencies</h2>
-                    <p>See how much your investments are worth when converted different currencies.</p>
-                </div>
+        <div className="card">
+          <h2>Calculate currencies</h2>
+          <p>See how much your investments are worth when converted different currencies.</p>
+        </div>
 
-                <div className="card">
-                    <h2>Calculate taxes automatically</h2>
-                    <p>Use tax calculator to generate tax reports for different countries.</p>
-                </div>
+        <div className="card">
+          <h2>Calculate taxes automatically</h2>
+          <p>Use tax calculator to generate tax reports for different countries.</p>
+        </div>
 
-            </div>
-        </main>
+      </div>
+    </main>
 
-        <footer>
-            Copyright &copy; 2020 Mateusz Ciszczoń
-        </footer>
+    <footer>
+      Copyright &copy; 2020 Mateusz Ciszczoń
+    </footer>
 
-        <style jsx>{`
+    <style jsx>{`
       .container {
         min-height: 100vh;
         padding: 0 0.5rem;
@@ -171,7 +171,7 @@ const Home = () => (
       }
     `}</style>
 
-        <style jsx global>{`
+    <style jsx global>{`
       html,
       body {
         padding: 0;
@@ -184,7 +184,7 @@ const Home = () => (
         box-sizing: border-box;
       }
     `}</style>
-    </div>
+  </div>
 )
 
 export default Home
