@@ -1,0 +1,37 @@
+version: "3.7"
+
+x-network:
+  &network
+  networks:
+    - investoko_network
+
+services:
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    volumes:
+      - "./frontend/app:/app"
+      - "./frontend/app/node_modules"
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    command: "next dev"
+    <<: *network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - "./backend:/app"
+    ports:
+      - "8000:80"
+    <<: *network
+
+networks:
+  investoko_network:
+    external: true
+
