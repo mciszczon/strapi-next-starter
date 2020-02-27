@@ -18,6 +18,8 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=development
+    links:
+      - backend
     command: "next dev"
     <<: *network
 

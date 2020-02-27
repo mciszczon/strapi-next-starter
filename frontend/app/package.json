@@ -6,10 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "standard": "npx standard"
+    "standard": "npx standard",
+    "analyze": "ANALYZE=true npm run build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^9.2.2",
     "next": "9.2.2",
+    "prop-types": "^15.7.2",
     "react": "16.13.0",
     "react-dom": "16.13.0"
   },
@@ -24,6 +27,7 @@
   },
   "standard": {
     "globals": [
+      "require",
       "React"
     ],
     "ignore": [
