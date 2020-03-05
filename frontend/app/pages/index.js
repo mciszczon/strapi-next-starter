@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import Card from '~/components/Card'
 import Footer from '~/components/Footer'
-
+import Subscribe from '~/components/Subscribe'
 import sass from '~/sass/pages/index.scss';
 
 const Home = () => (
@@ -15,6 +15,8 @@ const Home = () => (
     <main>
       <h1 className={sass.title}>⚡ Welcome to Investoko</h1>
       <p className={sass.description}>We're launching soon!</p>
+
+      <Subscribe/>
 
       <div className={sass.grid}>
         <Card
