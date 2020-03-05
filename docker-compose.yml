@@ -10,16 +10,16 @@ services:
   frontend:
     build:
       context: ./frontend
-      dockerfile: Dockerfile
+      dockerfile: ./docker/app/Dockerfile
     volumes:
       - "./frontend/app:/app"
     ports:
-      - "3000:3000"
+      - "80:3000"
     environment:
-      - NODE_ENV=development
+      - NODE_ENV=production
     links:
       - backend
-    command: "next dev"
+    command: "next build && next start"
     <<: *network
 
   backend:
@@ -28,11 +28,8 @@ services:
       dockerfile: Dockerfile
     volumes:
       - "./backend:/app"
-    ports:
-      - "8000:80"
     <<: *network
 
 networks:
   investoko_network:
     external: true
-

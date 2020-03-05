@@ -7,7 +7,10 @@
     "build": "next build",
     "start": "next start",
     "standard": "npx standard",
-    "analyze": "ANALYZE=true npm run build"
+    "analyze": "ANALYZE=true npm run build",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "docz:serve": "docz build && docz serve"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^9.2.2",
@@ -19,6 +22,7 @@
     "react-dom": "16.13.0"
   },
   "devDependencies": {
+    "docz": "^2.2.0",
     "husky": "^4.2.3",
     "standard": "*"
   },

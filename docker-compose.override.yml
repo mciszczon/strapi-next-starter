@@ -10,7 +10,7 @@ services:
   frontend:
     build:
       context: ./frontend
-      dockerfile: Dockerfile
+      dockerfile: ./docker/app/Dockerfile
     volumes:
       - "./frontend/app:/app"
     ports:
@@ -30,10 +30,19 @@ services:
       - "./backend:/app"
     ports:
       - "8000:80"
-    command: "/start-reload.sh"
+    <<: *network
+
+  docs:
+    build:
+      context: ./frontend
+      dockerfile: ./docker/docs/Dockerfile
+    volumes:
+      - "./frontend/app:/app"
+    ports:
+      - "5000:5000"
+    command: "npm run docz:dev"
     <<: *network
 
 networks:
   investoko_network:
     external: true
-
