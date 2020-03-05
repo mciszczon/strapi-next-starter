@@ -30,6 +30,7 @@ services:
       - "./backend:/app"
     ports:
       - "8000:80"
+    command: "/start-reload.sh"
     <<: *network
 
 networks:
