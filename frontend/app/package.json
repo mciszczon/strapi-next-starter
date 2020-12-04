@@ -25,6 +25,7 @@
   "devDependencies": {
     "docz": "^2.2.0",
     "husky": "^4.3.0",
+    "plop": "^2.7.4",
     "standard": "*"
   },
   "husky": {
