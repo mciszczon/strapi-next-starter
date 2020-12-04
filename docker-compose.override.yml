@@ -16,10 +16,10 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
     links:
       - backend
-    command: "next build && next start"
+    command: "next dev"
     <<: *network
 
   backend:
@@ -28,6 +28,19 @@ services:
       dockerfile: Dockerfile
     volumes:
       - "./backend:/app"
+    ports:
+      - "8000:80"
+    <<: *network
+
+  docs:
+    build:
+      context: ./frontend
+      dockerfile: ./docker/docs/Dockerfile
+    volumes:
+      - "./frontend/app:/app"
+    ports:
+      - "5000:5000"
+    command: "npm run docz:dev"
     <<: *network
 
 networks:

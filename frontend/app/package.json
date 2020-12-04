@@ -6,14 +6,23 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "standard": "npx standard"
+    "standard": "npx standard",
+    "analyze": "ANALYZE=true npm run build",
+    "docz:dev": "docz dev",
+    "docz:build": "docz build",
+    "docz:serve": "docz build && docz serve"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^9.2.2",
+    "@zeit/next-sass": "^1.0.1",
+    "node-sass": "^4.13.1",
+    "prop-types": "^15.7.2",
     "next": "10.0.3",
     "react": "16.13.0",
     "react-dom": "16.13.0"
   },
   "devDependencies": {
+    "docz": "^2.2.0",
     "husky": "^4.3.0",
     "standard": "*"
   },
@@ -24,6 +33,7 @@
   },
   "standard": {
     "globals": [
+      "require",
       "React"
     ],
     "ignore": [
