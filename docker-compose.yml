@@ -23,11 +23,11 @@ services:
     <<: *network
 
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    image: strapi/strapi
     volumes:
-      - "./backend:/app"
+      - ./backend/strapi:/srv/app
+    ports:
+      - "1337:1337"
     <<: *network
 
 networks:
