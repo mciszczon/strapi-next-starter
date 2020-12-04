@@ -13,7 +13,6 @@
     "docz:serve": "docz build && docz serve"
   },
   "dependencies": {
-    "@babel/plugin-proposal-export-default-from": "^7.12.1",
     "@next/bundle-analyzer": "^9.2.2",
     "@zeit/next-sass": "^1.0.1",
     "next": "10.0.3",
