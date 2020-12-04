@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Card from '~/components/Card'
 import Footer from '~/components/Footer'
 import Subscribe from '~/components/Subscribe'
-import sass from '~/sass/pages/index.scss';
+import sass from '~/sass/pages/index.scss'
 
 const Home = () => (
   <div className='container'>
